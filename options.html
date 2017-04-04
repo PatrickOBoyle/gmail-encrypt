@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Options | Gmail Encrypt</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="openpgp.min.js"></script>
+  </head>
+  <body>
+    <label>Your email
+      <input id="userEmail" type="text" placeholder="you@provider.com">
+    </label>
+    <br>
+    <label>Your passphrase
+      <input id="passphrase" type="password" placeholder="Secret">
+    </label>
+    <br><br>
+    <button id='genKeys'>Generate keys</button>
+
+    <br><br>
+
+    <div id='generatedKeys'>
+      <button id="displayPubKey">Public Key</button>
+      <button id="displayPriKey">Private Key</button>
+
+      <br><br>
+
+      <textarea rows=4 id=pubKey></textarea>
+      <textarea rows=4 id=priKey></textarea>
+    </div>
+
+    <br><br>
+
+    <div>
+      <h2 id='status'>Users you can securely message:</h2>
+      <ul id='emailList'></ul>
+    </div>
+
+    <br>
+
+    <h2>Add user</h2>
+    <label>
+      Email
+      <input id='emailAddress' type='text' placeholder='user@example.org'/>
+    </label>
+    <label>
+      Public Key
+      <input id='contactPubKey' type='text' placeholder='Public key'/>
+    </label>
+    <br><br>
+
+    <div>
+      <button id='saveEmail'>Add user to list</button>
+    </div>
+
+    <br>
+
+    <h2 id='resetStatus'>Reset email list:</h2>
+    <div>
+      <button id='clearUsers'>Clear email list</button>
+    </div>
+
+
+    <script src="options.js"></script>
+  </body>
+</html>
